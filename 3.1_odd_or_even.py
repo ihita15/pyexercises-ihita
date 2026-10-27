@@ -24,10 +24,12 @@ DELIVERABLE
     This file, with your comments and your code.
 """
 
-# 1. In:
-# 2. Process:
-# 3. Out:
-# 4. What happens on 0, on a negative number, on a very large number:
+# 1. In: A whole number N entered by the user
+# 2. Process: Check each number from 1 to N using % 2
+# 3. Out: Print whether each number is odd or even.
+# 4. What happens on 0, on a negative number, on a very large number:Explain that there are no numbers to check.
+#    Negative: Ask for a positive number instead.
+#    5000: Limit N to 100 to avoid printing too many lines.
 
 
 # Your code below
