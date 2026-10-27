@@ -22,10 +22,10 @@ DELIVERABLE
     This file, with your comments and your code.
 """
 
-# 1. In:
-# 2. Process:
-# 3. Out:
-# 4. My message, and why:
+# 1. In: a string of my name
+# 2. Process: a loop for printing my name 5 times
+# 3. Out: my name printed 5 times
+# 4. My message, and why: wrote a python file to print my name 5 times using print statement
 
 
 # Your code below
@@ -36,3 +36,5 @@ print("3. hello world")
 print("4. hello world")
 print("5. hello world")
 
+for i in range(0,5):
+    print("hello")
