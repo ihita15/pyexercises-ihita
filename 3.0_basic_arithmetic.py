@@ -24,10 +24,10 @@ DELIVERABLE
     This file, with your comments and your code.
 """
 
-# 1. In:
-# 2. Process:
-# 3. Out:
-# 4. What happens when the second number is zero, and why:
+# 1. In: using float input option to add numbers
+# 2. Process: performed basic arethmatic functions on the two numbers
+# 3. Out: got the results of two numbers
+# 4. What happens when the second number is zero, and why: division cannot be performed 
 
 
 # Your code below
@@ -51,4 +51,3 @@ if number2 == 0:
     print("the division cannot be performed")
 else:
     print("division:", number1/number2)
-    
