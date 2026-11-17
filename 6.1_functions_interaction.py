@@ -28,10 +28,67 @@ DELIVERABLE
     This file, with your comments and your code.
 """
 
-# 1. In:
+ 1. In:
+# A list of numbers.
+
 # 2. Process, function by function:
+# Function 1 calculates the sum.
+# Function 2 finds the maximum number.
+# Function 3 finds the minimum number.
+# Function 4 combines the three functions.
+
 # 3. Out:
+# The total, maximum and minimum numbers.
+
 # 4. The question my fourth function answers:
+# What are the total, highest and lowest numbers?
+# Splitting the code makes each function easier to test.
 
 
-# Your code below
+# Function 1: Calculate the sum
+
+def calculate_sum(numbers):
+    return sum(numbers)
+
+
+# Function 2: Find the maximum
+def find_maximum(numbers):
+    return max(numbers)
+
+
+# Function 3: Find the minimum
+def find_minimum(numbers):
+    return min(numbers)
+
+
+# Function 4: Combine all three functions
+def analyse_list(numbers):
+    if len(numbers) == 0:
+        return 0, None, None
+
+    total = calculate_sum(numbers)
+    maximum = find_maximum(numbers)
+    minimum = find_minimum(numbers)
+
+    return total, maximum, minimum
+
+
+# Test each function separately
+
+# Test 1: Input [10, 20, 30], expected output 60
+print(calculate_sum([10, 20, 30]))
+
+# Test 2: Input [10, 20, 30], expected output 30
+print(find_maximum([10, 20, 30]))
+
+# Test 3: Input [10, 20, 30], expected output 10
+print(find_minimum([10, 20, 30]))
+
+
+# Test the fourth function
+numbers = [10, 20, 30, 40, 50]
+
+print("Analysis:", analyse_list(numbers))
+
+# Test an empty list
+print("Empty list:", analyse_list([]))

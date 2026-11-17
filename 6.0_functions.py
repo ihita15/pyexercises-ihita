@@ -26,43 +26,40 @@ DELIVERABLE
     This file, with your comments and your code.
 """
 
-1. In:
-# The function receives a list of numbers.
+#1. In: A list of monthly budgets (numbers).
+#2. Process: Calculate the total and average monthly budget.
+#3. Out: The total and average budget.
+#4. Function name: calculate_budget_summary.
+   #Return is used instead of print because it allows the
+   #result to be reused in other parts of the program.
 
-# 2. Process:
-# It calculates the total and average of the numbers in the list.
+monthly_budgets = [200, 450, 600, 300, 500, 250, 150, 350]
 
-# 3. Out:
-# It returns the total and average.
 
-# 4. My function name is calculate_total_and_average.
-# Return is used instead of print because the returned result
-# can be reused in other parts of the program.
-
-# Your code below
-def calculate_total_and_average(numbers):
-    if len(numbers) == 0:
+def calculate_budget_summary(budgets):
+    if len(budgets) == 0:
         return 0, 0
 
-    total = sum(numbers)
-    average = total / len(numbers)
+    total = sum(budgets)
+    average = total / len(budgets)
 
     return total, average
 
 
 # Calling the function three times with different inputs
+result1 = calculate_budget_summary(monthly_budgets)
+result2 = calculate_budget_summary([100, 200, 300])
+result3 = calculate_budget_summary([500, 700, 900])
 
-result1 = calculate_total_and_average([10, 20, 30])
-result2 = calculate_total_and_average([5, 15, 25, 35])
-result3 = calculate_total_and_average([100, 200, 300])
+print("Monthly budgets:", result1)
+print("Second budget list:", result2)
+print("Third budget list:", result3)
 
-print("First result:", result1)
-print("Second result:", result2)
-print("Third result:", result3)
-#Checking with an empty list
-empty_result = calculate_total_and_average([])
 
-print("Empty list result:", empty_result)
+# Checking the function with an empty list
+empty_result = calculate_budget_summary([])
 
-# The function returns (0, 0) for an empty list.
-# This is acceptable because there are no numbers to calculate.
+print("Empty list:", empty_result)
+
+# An empty list returns (0, 0), which is acceptable
+# because there are no budgets to calculate.
