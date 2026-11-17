@@ -36,16 +36,62 @@ DELIVERABLE
     This file, plus the output file your program produced.
 """
 
-# What is wrong with names.txt (found by reading it, not by guessing):
-# -
-# -
-# -
-# -
-
+# Problems found in names.txt:
+# 1. Names have inconsistent capitalisation.
+# 2. Some names have extra spaces at the beginning.
+# 3. There is a blank line in the file.
+# 4. First and last names do not follow consistent formatting.
+#
 # 1. In:
-# 2. Process, problem by problem:
+#    Names stored in names.txt.
+#
+# 2. Process:
+#    - Read the original file.
+#    - Remove extra spaces.
+#    - Remove blank lines.
+#    - Correct capitalisation.
+#    - Sort names alphabetically by last name.
+#
 # 3. Out:
+#    A new file called cleaned_names.txt.
+#
 # 4. How I decide which word is the last name:
+#    The last word in each line is treated as the last name.
+#    The names are sorted alphabetically using that word.
+
+# Open and read the original file
+with open("names.txt", "r") as file:
+    names = file.readlines()
 
 
-# Your code below
+# Clean the names
+cleaned_names = []
+
+for name in names:
+    name = name.strip()
+
+    # Skip empty lines
+    if name != "":
+        # Correct capitalisation
+        name = name.title()
+        cleaned_names.append(name)
+
+
+# Sort names by last name
+cleaned_names.sort(key=lambda name: name.split()[-1])
+
+
+# Save the cleaned names in a new file
+with open("cleaned_names.txt", "w") as file:
+    for name in cleaned_names:
+        file.write(name + "\n")
+
+
+# Display the result
+print("Cleaned and sorted names:")
+
+for name in cleaned_names:
+    print(name)
+
+print("\nNames successfully saved to cleaned_names.txt!")
+
