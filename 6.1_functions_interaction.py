@@ -28,67 +28,70 @@ DELIVERABLE
     This file, with your comments and your code.
 """
 
- 1. In:
-# A list of numbers.
-
+# 1. In:
+#    A list of monthly budgets.
+#
 # 2. Process, function by function:
-# Function 1 calculates the sum.
-# Function 2 finds the maximum number.
-# Function 3 finds the minimum number.
-# Function 4 combines the three functions.
-
+#    - get_total() calculates the total budget.
+#    - get_average() calculates the average budget.
+#    - get_highest() finds the highest monthly budget.
+#    - budget_summary() combines the three functions.
+#
 # 3. Out:
-# The total, maximum and minimum numbers.
-
+#    Total, average and highest monthly budget.
+#
 # 4. The question my fourth function answers:
-# What are the total, highest and lowest numbers?
-# Splitting the code makes each function easier to test.
+#    What is the overall summary of my monthly budgets?
+#    Splitting the work into three functions makes each
+#    calculation easier to test and check.
+
+monthly_budgets = [200, 450, 600, 300, 500, 250, 150, 350]
 
 
-# Function 1: Calculate the sum
-
-def calculate_sum(numbers):
-    return sum(numbers)
-
-
-# Function 2: Find the maximum
-def find_maximum(numbers):
-    return max(numbers)
+# Function 1: Calculate total budget
+def get_total(budgets):
+    return sum(budgets)
 
 
-# Function 3: Find the minimum
-def find_minimum(numbers):
-    return min(numbers)
+# Function 2: Calculate average budget
+def get_average(budgets):
+    if len(budgets) == 0:
+        return 0
+    return sum(budgets) / len(budgets)
 
 
-# Function 4: Combine all three functions
-def analyse_list(numbers):
-    if len(numbers) == 0:
-        return 0, None, None
-
-    total = calculate_sum(numbers)
-    maximum = find_maximum(numbers)
-    minimum = find_minimum(numbers)
-
-    return total, maximum, minimum
+# Function 3: Find highest monthly budget
+def get_highest(budgets):
+    if len(budgets) == 0:
+        return 0
+    return max(budgets)
 
 
-# Test each function separately
+# Testing each function separately
 
-# Test 1: Input [10, 20, 30], expected output 60
-print(calculate_sum([10, 20, 30]))
+# Test 1: Input [100, 200, 300], expected output: 600
+print("Test total:", get_total([100, 200, 300]))
 
-# Test 2: Input [10, 20, 30], expected output 30
-print(find_maximum([10, 20, 30]))
+# Test 2: Input [100, 200, 300], expected output: 200
+print("Test average:", get_average([100, 200, 300]))
 
-# Test 3: Input [10, 20, 30], expected output 10
-print(find_minimum([10, 20, 30]))
+# Test 3: Input [100, 200, 300], expected output: 300
+print("Test highest:", get_highest([100, 200, 300]))
 
 
-# Test the fourth function
-numbers = [10, 20, 30, 40, 50]
+# Function 4: Combine the three functions
+def budget_summary(budgets):
+    total = get_total(budgets)
+    average = get_average(budgets)
+    highest = get_highest(budgets)
 
-print("Analysis:", analyse_list(numbers))
+    return total, average, highest
 
-# Test an empty list
-print("Empty list:", analyse_list([]))
+
+# Display results using the monthly_budgets list
+result = budget_summary(monthly_budgets)
+
+print("\nMonthly Budget Summary")
+print("Total budget:", result[0])
+print("Average budget:", result[1])
+print("Highest monthly budget:", result[2])
