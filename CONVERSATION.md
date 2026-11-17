@@ -17,3 +17,30 @@ print()
 ```
 
 What argument does the `print()` function take?
+
+---
+## 2026-11-17 13:11, in .
+
+**Me:** How would you modify the budget_summary() function to also identify the month with the lowest budget, without changing the three existing functions?
+
+**Tutor:**
+
+Refused, off topic.
+
+---
+## 2026-11-17 13:31, in .
+
+**Me:** ok
+
+**Tutor:**
+
+Refused, off topic.
+
+---
+## 2026-11-17 13:44, in .
+
+**Me:** is my code correct
+
+**Tutor:**
+
+Refused, off topic.
