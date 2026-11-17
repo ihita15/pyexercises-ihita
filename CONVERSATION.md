@@ -44,3 +44,66 @@ Refused, off topic.
 **Tutor:**
 
 Refused, off topic.
+
+---
+## 2026-11-17 14:24, in .
+
+**Me:** /ouit
+
+**Tutor:**
+
+Refused, off topic.
+
+---
+## 2026-11-17 14:33, in .
+
+**Me:** how to change name in the file
+
+**Tutor:**
+
+Refused, off topic.
+
+---
+## 2026-11-17 14:42, in .
+
+**Me:** why did i get fired
+
+**Tutor:**
+
+Refused, off topic.
+
+---
+## 2026-11-17 14:42, in .
+
+**Me:** what does fired mean?
+
+**Tutor:**
+
+Refused, off topic.
+
+---
+## 2026-11-17 14:42, in .
+
+**Me:** where can i find the results file
+
+**Tutor:**
+
+Refused, off topic.
+
+---
+## 2026-11-17 14:45, in .
+
+**Me:** how many scenarios are there?
+
+**Tutor:**
+
+Refused, off topic.
+
+---
+## 2026-11-17 14:49, in .
+
+**Me:** how to fix errors
+
+**Tutor:**
+
+Refused, off topic.
